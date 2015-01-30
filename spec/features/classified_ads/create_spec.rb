@@ -55,5 +55,46 @@ feature "Creating new Ad", js: true do
 			visit "/classified_ads"
 			expect(page).to_not have_content("Car for sale`")
 		end
+
+		it "displays an error when the ad has no Description" do
+			@count = ClassifiedAd.count
+
+			visit '/classified_ads'
+
+			click_link "New Classified ad"
+
+			expect(page).to have_content("New Classified Ad")
+
+			fill_in "Title", with: "First Ad"
+			fill_in "Description", with: ""
+			click_button "Create Classified ad"
+
+			expect(page).to have_content("error")
+			expect(ClassifiedAd.count).to eq(@count)
+
+			visit "/classified_ads"
+			expect(page).to_not have_content("Car for sale`")
+		end
+
+		it "displays an error when the ad has description less than 5 charecters" do
+			@count = ClassifiedAd.count
+
+			visit '/classified_ads'
+
+			click_link "New Classified ad"
+
+			expect(page).to have_content("New Classified Ad")
+
+			fill_in "Title", with: "Hi new ad here"
+			fill_in "Description", with: "Car"
+			click_button "Create Classified ad"
+
+			expect(page).to have_content("error")
+			expect(ClassifiedAd.count).to eq(@count)
+
+			visit "/classified_ads"
+			expect(page).to_not have_content("Hi new ad here")
+		end
+
 	end
 end
