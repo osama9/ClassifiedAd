@@ -32,5 +32,7 @@ module ClassifiedApp
     config.generators.stylesheets = false
     config.generators.javascripts = false
     config.serve_static_files = true
+
+    
   end
 end

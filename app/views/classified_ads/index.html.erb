@@ -13,7 +13,7 @@
 
   <tbody>
     <% @classified_ads.each do |classified_ad| %>
-      <tr>
+      <tr id="<%= dom_id(classified_ad) %>">
         <td><%= classified_ad.title %></td>
         <td><%= classified_ad.description %></td>
         <td><%= link_to 'Show', classified_ad %></td>

@@ -23,7 +23,7 @@ feature "Creating new Ad", js: true do
 		it "redirects to the classified ad index page on success" do
 			
 			create_classified_ad
-			expect(page).to have_content("his is my classified ad")
+			expect(page).to have_content("This is my classified ad")
 		end
 
 		it "displays an error when the ad has no title" do
