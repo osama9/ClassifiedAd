@@ -13,4 +13,9 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap/dist/css/bootstrap";
+@import "login-signup-modal-window/css/style";
+@import "bootstrap/dist/css/bootstrap"; 
+@import "bootstrap-material-design/dist/css/material";
+@import "bootstrap-material-design/dist/css/ripples";
+@import "bootstrap-material-design/dist/css/material-wfont";
+

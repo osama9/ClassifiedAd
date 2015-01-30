@@ -1,5 +1,6 @@
 class ClassifiedAdsController < ApplicationController
   before_action :set_classified_ad, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   # GET /classified_ads
   # GET /classified_ads.json

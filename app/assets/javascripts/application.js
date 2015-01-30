@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
+//= require login-signup-modal-window/js/main
 //= require turbolinks
 //= require_tree .

@@ -1,6 +1,14 @@
+<% content_for :column_width_start do %>
+<div class="col-md-3 col-md-offset-6">
+<% end %>
 <h1>Editing Classified Ad</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @classified_ad %> |
 <%= link_to 'Back', classified_ads_path %>
+
+<% content_for :column_width_end do %>
+</div>
+<% end %>
+

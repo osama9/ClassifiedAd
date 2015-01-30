@@ -1,8 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% content_for :column_width_start do %>
+<div class="col-md-3 col-md-offset-4">
+<% end %>
+
 
 <h1>Listing Classified Ads</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -26,4 +29,8 @@
 
 <br>
 
-<%= link_to 'New Classified ad', new_classified_ad_path %>
+<%= link_to 'New Classified ad', new_classified_ad_path, class: "btn btn-success" %>
+
+<% content_for :column_width_end do %>
+</div>
+<% end %>

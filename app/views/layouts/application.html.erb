@@ -3,17 +3,66 @@
 <head>
   <title>ClassifiedApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ 
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-		<%= yield %>
-	</div>
+<div class="header-panel">
+	<%= render partial: "classified_ads/partials/navbar" %>
 </div>
+<div class="container-fluid main">
+<div class="row">
 
+	
+
+		<% if content_for?(:column_width_start) %>
+			<%= yield(:column_width_start) %>
+		<% else %>
+			<div class="col-md-6- col-md-offset-3">
+		<% end %>
+		<p class="alert-success"><%= notice %></p>
+		<p class="alert-danger"><%= alert %></p>
+		<%= yield %>
+
+		<% if content_for?(:column_width_end) %>
+			<%= yield(:column_width_end) %>
+		<% else %>
+			</div>
+		<% end %>
+
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+	<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+		
+		<ul class="cd-switcher">
+			<li><a href="#0">Login</a></li>
+			<li><a href="#0">New account</a></li>
+		</ul>
+		
+		<div id="cd-login">
+			<%= render partial: "devise/partials/login" %>
+			<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+		</div>
+
+		<div id="cd-signup">
+      		<%= render partial: "devise/partials/sign_up" %>
+    	</div>
+
+    	<div id="cd-reset-password">
+ 
+      		<!-- form here -->
+ 
+	      <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+	    </div>
+
+	</div>
+	<a href="#0" class="cd-close-form">Close</a>
+</div>
+		
+		
+	
+</div>
+</div>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

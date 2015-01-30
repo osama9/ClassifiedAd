@@ -27,7 +27,7 @@ module ClassifiedApp
     #TONOTE
     #To add the following paths to assets pipeline  
     config.assets.paths << Rails.root.join("vendor", "assets", "bower_components")
-    config.assets.paths << Rails.root.join("vendor", "assets", "bower_components", "bootstrap", "dist", "fonts")
+    config.assets.paths << Rails.root.join("vendor", "assets", "bower_components", "bootstrap-material-design", "dist", "fonts")
 
     config.generators.stylesheets = false
     config.generators.javascripts = false
