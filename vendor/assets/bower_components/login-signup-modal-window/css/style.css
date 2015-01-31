@@ -226,6 +226,9 @@ xsigin/signup popup
   -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+.cd-switcher {
+  padding: 0;
+}
 .cd-user-modal-container .cd-switcher:after {
   content: "";
   display: table;

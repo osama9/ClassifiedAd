@@ -1,27 +1,32 @@
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "cd-form"}) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <p class="fieldset">
+    <label class="image-replace cd-username" for="signup-username">Username</label>
+    <%= f.text_field :username, autofocus: true, :class => "full-width has-padding form-control", placeholder: "Username" %>
+  </p>
 
-  <div class="field">
-    <%= f.label :password %>
+	<p class="fieldset">
+    <label class="image-replace cd-email" for="signup-email">Username</label>
+    <%= f.email_field :email, autofocus: true, :class => "full-width has-padding form-control", placeholder: "Email" %>
+	</p>
+
+  <p class="fieldset">
+    <label class="image-replace cd-password" for="signup-password">Password</label>
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <%= f.password_field :password, autocomplete: "off", :class => "full-width has-padding form-control", placeholder: "Password" %>
+  </p>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+  <p class="fieldset">
+    <label class="image-replace cd-password" for="signup-password">Password</label>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "full-width has-padding form-control", placeholder: "Password Confirmation" %>
+  </p>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+  <p class="fieldset">
+    <%= f.submit "Sign up", :class => "full-width" %>
+  </p>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<!--<%= render "devise/shared/links" %> -->

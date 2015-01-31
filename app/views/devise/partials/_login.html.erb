@@ -2,11 +2,13 @@
   <p class="fieldset">
     <label class="image-replace cd-email" for="signin-email">E-mail</label>
     <%= f.email_field :email, autofocus: true, :class => "full-width has-padding form-control", placeholder: "Email" %>
+    <span class="cd-error-message">Error message here!</span>
   </p>
 
   <p class="fieldset">
     <label class="image-replace cd-password" for="signin-password">Password</label>
     <%= f.password_field :password, autocomplete: "off", :class => "full-width has-padding form-control", :id => "signin-password", placeholder: "password" %>
+    <span class="cd-error-message">Error message here!</span>
   </p>
 
   <% if devise_mapping.rememberable? -%>
