@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_one :classified_ad
+  has_many :classified_ads
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

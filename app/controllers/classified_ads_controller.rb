@@ -26,7 +26,7 @@ class ClassifiedAdsController < ApplicationController
   # POST /classified_ads.json
   def create
     if current_user
-      @classified_ad = current_user.build_classified_ad(classified_ad_params)
+      @classified_ad = current_user.classified_ads.new(classified_ad_params)
     else
       @classified_ad = ClassifiedAd.new(classified_ad_params)
       @classified_ad.user_id =0

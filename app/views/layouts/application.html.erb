@@ -10,15 +10,17 @@
 <div class="header-panel">
 	<%= render partial: "classified_ads/partials/navbar" %>
 </div>
-<div class="container-fluid main">
+
+<div class="container-fluid">
 <div class="row">
 
+<%= render "classified_ads/partials/sidebar" %>
 	
 
 		<% if content_for?(:column_width_start) %>
 			<%= yield(:column_width_start) %>
 		<% else %>
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-6 col-md-offset-3 main">
 		<% end %>
 		<p class="alert-success"><%= notice %></p>
 		<p class="alert-danger"><%= alert %></p>
