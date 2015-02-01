@@ -28,13 +28,12 @@
                     <div class="form-control-wrapper"><input type="text" class="form-control col-lg-8 empty" placeholder="Search"><span class="material-input"></span></div>
                   </form>
                   
-                  
+                  <ul class="nav navbar-nav navbar-right">
                   <% if user_signed_in? %>
-                    <ul class="nav navbar-nav navbar-right">
-                  	<li><%= link_to "Logout", logout_path %> </li>                   
+                    
+                  	<li><%= link_to "Logout", logout_path%> </li>                   
                   <% else %>
-                    <ul class="nav navbar-nav navbar-right registeration-nav">
-                  	 <li><a class="cd-signin" href="#0" id="login-link">Login</a></li>
+                  	 <li class="registeration-nav"><a class="cd-signin" href="#0" id="login-link">Login</a></li>
                   <% end %>
                  
                     <li class="dropdown">

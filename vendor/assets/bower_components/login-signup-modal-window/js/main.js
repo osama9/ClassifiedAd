@@ -15,10 +15,10 @@ jQuery(document).ready(function($){
 
 		if( $(event.target).is($main_nav) ) {
 			// on mobile open the submenu
-			$(this).children('ul').toggleClass('is-visible');
+			$(this).toggleClass('is-visible');
 		} else {
 			// on mobile close submenu
-			$main_nav.children('ul').removeClass('is-visible');
+			$main_nav.removeClass('is-visible');
 			//show modal layer
 			$form_modal.addClass('is-visible');	
 			//show the selected form

@@ -14,9 +14,10 @@
   <p class="fieldset">
     <label class="image-replace cd-password" for="signup-password">Password</label>
     <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <em class="pull-right">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
     <%= f.password_field :password, autocomplete: "off", :class => "full-width has-padding form-control", placeholder: "Password" %>
+    
   </p>
 
   <p class="fieldset">
