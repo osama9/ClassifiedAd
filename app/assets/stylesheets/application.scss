@@ -10,12 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+
  *= require_self
  */
+@import "style";
 @import "login-signup-modal-window/css/style";
 @import "bootstrap/dist/css/bootstrap"; 
 @import "bootstrap-material-design/dist/css/material";
 @import "bootstrap-material-design/dist/css/ripples";
 @import "bootstrap-material-design/dist/css/material-wfont";
+
 
