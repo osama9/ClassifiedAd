@@ -1,11 +1,11 @@
 class ClassifiedAdsController < ApplicationController
   before_action :set_classified_ad, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy, :new]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /classified_ads
   # GET /classified_ads.json
   def index
-    @classified_ads = ClassifiedAd.all
+    @classified_ads = ClassifiedAd.order(created_at: :desc)
   end
 
   # GET /classified_ads/1
@@ -25,8 +25,12 @@ class ClassifiedAdsController < ApplicationController
   # POST /classified_ads
   # POST /classified_ads.json
   def create
-    @classified_ad = ClassifiedAd.new(classified_ad_params)
-
+    if current_user
+      @classified_ad = current_user.build_classified_ad(classified_ad_params)
+    else
+      @classified_ad = ClassifiedAd.new(classified_ad_params)
+      @classified_ad.user_id =0
+    end
     respond_to do |format|
       if @classified_ad.save
         format.html { redirect_to @classified_ad, notice: 'Classified ad was successfully created.' }

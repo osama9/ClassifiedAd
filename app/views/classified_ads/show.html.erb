@@ -6,6 +6,12 @@
 
 <p id="notice"><%= notice %></p>
 
+<% if @classified_ad.user %>
+<p>
+  <strong>Owner:</strong>
+  <%= @classified_ad.user.username %>
+</p>
+<% end %>
 <p>
   <strong>Title:</strong>
   <%= @classified_ad.title %>
