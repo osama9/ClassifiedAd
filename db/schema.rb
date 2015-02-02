@@ -11,22 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201170446) do
+ActiveRecord::Schema.define(version: 20150202162523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "arabic_name",                 null: false
+    t.string   "english_name",                null: false
+    t.boolean  "is_active",    default: true
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
   create_table "classified_ads", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
     t.boolean  "is_published", default: true
     t.boolean  "is_expired",   default: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
+  add_index "classified_ads", ["category_id"], name: "index_classified_ads_on_category_id", using: :btree
   add_index "classified_ads", ["user_id"], name: "index_classified_ads_on_user_id", using: :btree
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "",    null: false
