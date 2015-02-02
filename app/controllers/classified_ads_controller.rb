@@ -5,7 +5,7 @@ class ClassifiedAdsController < ApplicationController
   # GET /classified_ads
   # GET /classified_ads.json
   def index
-    @classified_ads = ClassifiedAd.order(created_at: :desc)
+    @classified_ads = Category.classified_ads.order(created_at: :desc)
   end
 
   # GET /classified_ads/1
