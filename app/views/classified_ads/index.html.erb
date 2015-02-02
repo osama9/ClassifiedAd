@@ -17,8 +17,8 @@
   <tbody>
     <% @classified_ads.each do |classified_ad| %>
       <tr id="<%= dom_id(classified_ad) %>">
-        <td><%= classified_ad.category.product.title %></td>
-        <td><%= classified_ad.category.product.description %></td>
+        <td><%= classified_ad.title %></td>
+        <td><%= classified_ad.description %></td>
         <td><%= link_to 'Show', classified_ad %></td>
         <td><%= link_to 'Edit', edit_classified_ad_path(classified_ad) %></td>
         <td><%= link_to 'Destroy', classified_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,7 +5,7 @@ class ClassifiedAdsController < ApplicationController
   # GET /classified_ads
   # GET /classified_ads.json
   def index
-    @classified_ads = Category.classified_ads.order(created_at: :desc)
+    @classified_ads = ClassifiedAd.order(created_at: :desc)
   end
 
   # GET /classified_ads/1
@@ -15,6 +15,7 @@ class ClassifiedAdsController < ApplicationController
 
   # GET /classified_ads/new
   def new
+    @categories = Category.all()
     @classified_ad = ClassifiedAd.new
   end
 
@@ -74,6 +75,6 @@ class ClassifiedAdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classified_ad_params
-      params.require(:classified_ad).permit(:title, :description)
+      params.require(:classified_ad).permit(:title, :description, :category_id)
     end
 end
