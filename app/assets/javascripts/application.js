@@ -12,7 +12,14 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require angular-route
+//= require angular-rails-templates	
 //= require bootstrap/dist/js/bootstrap
 //= require login-signup-modal-window/js/main
-
 //= require_tree ./templates
+//= require app
+//= require app.route
+//= require ./classified/classified
+//= require ./classified/services/classified.service
+//= require ./classified/controllers/add_list.controller
