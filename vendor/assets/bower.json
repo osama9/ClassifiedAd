@@ -1,6 +1,8 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap-material-design": "latest"
+    "bootstrap-material-design": "latest",
+    "angular": "latest",
+    "angular-route": "latest"
   }
 }

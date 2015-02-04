@@ -12,7 +12,9 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require angular-route
 //= require bootstrap/dist/js/bootstrap
 //= require login-signup-modal-window/js/main
-//= require turbolinks
-//= require_tree .
+//= require classified_ad
+//= require classified_ad.route
