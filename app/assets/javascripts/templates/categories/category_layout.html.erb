@@ -1,0 +1,19 @@
+<h1>Listing Classified Ads</h1>
+
+<table class="table" ng-show="vm.classifiedList.length > 0" ng-cloak>
+
+
+   <tbody>
+    
+      <tr ng-repeat="classified in vm.classifiedList">
+      
+	      	<td><img src="" width="150" height="150" /></td>
+	        <td> <a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></td>
+	        <td>{{classified.description}}</td>
+        
+      </tr>
+ 	</div>
+  </tbody>
+</table>
+
+<strong ng-hide="vm.classifiedList.length > 0">Sorry there are no items in this category :(</strong>

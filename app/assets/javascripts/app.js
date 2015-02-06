@@ -9,7 +9,8 @@
 
 	angular.module('app.route',['ngRoute']);
 	angular.module('classified',[
-		'classified.controllers.AdListController',
+		'classified.controllers.ClassifiedListController',
+		'classified.controllers.CategoryListController',
 		'classified.services.ClassifiedService'
 		]);
 

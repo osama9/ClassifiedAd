@@ -67,6 +67,15 @@ class ClassifiedAdsController < ApplicationController
     end
   end
 
+
+  def list_for_category
+    @category_list = if params[:id] 
+                       ClassifiedAd.where(category_id: params[:id])
+                     end
+
+    render :json => @category_list                     
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_classified_ad

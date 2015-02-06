@@ -1,13 +1,12 @@
 (function(){
 	'use strict';
 
-	angular.module('classified.controllers.AdListController')
-	 .controller('AdListController', AdListController);
+	angular.module('classified.controllers.ClassifiedListController')
+	 .controller('ClassifiedListController', ClassifiedListController);
 
-	 AdListController.$inject = ['Classified']
-	 function AdListController(Classified){
+	 ClassifiedListController.$inject = ['Classified']
+	 function ClassifiedListController(Classified){
 	 	var vm = this;
-
 	 	activate();
 
 	 	function activate(){
@@ -18,7 +17,8 @@
 	 		}
 
 	 		function getClassifiedListErrorFn(data, status, headers, config ){
-	 			console.log("Sucess");
+	 			console.log("ERROR");
+	 			console.log(data);
 	 		}
 	 	}
 	 }

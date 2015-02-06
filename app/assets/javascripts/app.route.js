@@ -9,13 +9,13 @@
 	function config($routeProvider){
 		$routeProvider
 			.when('/', {
-				controller: "AdListController",
+				controller: "ClassifiedListController",
 				controllerAs: "vm",
 				templateUrl: "classified_ads/index.html"
 				})
-			.when('/Video Games',{
-				templateUrl: "categories/video_games.html",
-				controller: "VideoGamesController",
+			.when('/:categoryId',{
+				templateUrl: "categories/category_layout.html",
+				controller: "CategoryListController",
 				controllerAs: "vm"
 			}).otherwise('/');
 	};

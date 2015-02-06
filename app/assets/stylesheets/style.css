@@ -24,3 +24,7 @@ margin-right: -21px;
 margin-bottom: 20px;
 margin-left: -20px;
 }
+
+table td a {
+  display: block;
+}

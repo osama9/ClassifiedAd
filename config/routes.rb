@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   
   resources :classified_ads
 
+  get '/category/:id' => 'classified_ads#list_for_category'
   #root "classified_ads#index"
   root "layouts#index"
   # The priority is based upon order of creation: first created -> highest priority.

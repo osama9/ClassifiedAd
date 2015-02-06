@@ -22,4 +22,5 @@
 //= require app.route
 //= require ./classified/classified
 //= require ./classified/services/classified.service
-//= require ./classified/controllers/add_list.controller
+//= require ./classified/controllers/classified_list.controller
+//= require ./classified/controllers/category_list.controller
