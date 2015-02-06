@@ -1,16 +1,32 @@
-<h1>Listing Classified Ads</h1>
+
+<a href="classified_ads/new" class="btn btn-primary mdi-content-add"></a>
 
 <table class="table" ng-cloak>
-
+	<thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>City</th>
+      <th>Date</th>
+    </tr>
+  </thead>
 
    <tbody>
     
       <tr ng-repeat="classified in vm.classifiedList">
-        <a href="/classified_ads/{{classified.id}}">
-          <td><img src="" width="150" height="150" /></td>
-          <td> {{classified.title}}</td>
-          <td>{{classified.description}}</td>
-        </a>
+        
+          <td class="post-image"><img src="" width="150" height="100" /></td>
+          <td>
+          	<h4><a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></h4>
+          	<p>{{classified.description}}</p>
+          </td>
+          <td class="post-city">
+          	<h5>Makkah
+          	{{classified.city.english_name}}
+          	</h5>
+          </td>
+          <td>{{classified.created_at | date:"dd/MM/yyyy 'at' h:mma"}}</td>
+        
       </tr>
  
   </tbody>

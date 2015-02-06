@@ -27,8 +27,23 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
+  RailsAdmin.config do |config|
+    config.authenticate_with do
+      warden.authenticate! scope: :user
+    end
+      config.current_user_method(&:current_user)
+  end
+
+
+  RailsAdmin.config do |config|
+    config.authorize_with do |controller|
+      redirect_to main_app.root_path unless current_user.try(:admin?)
+    end
+  end
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+
+    
   end
 end

@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   							message: 'Must be formatted correctly.',
                 			multiline:true
   						}
+
+  def admin?
+      self.is_admin
+  end
 end
