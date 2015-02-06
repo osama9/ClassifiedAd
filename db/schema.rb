@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206180225) do
+ActiveRecord::Schema.define(version: 20150206182604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(version: 20150206180225) do
     t.integer  "category_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "counrty_id"
+    t.integer  "country_id"
     t.integer  "city_id"
   end
 
   add_index "classified_ads", ["category_id"], name: "index_classified_ads_on_category_id", using: :btree
   add_index "classified_ads", ["city_id"], name: "index_classified_ads_on_city_id", using: :btree
-  add_index "classified_ads", ["counrty_id"], name: "index_classified_ads_on_counrty_id", using: :btree
+  add_index "classified_ads", ["country_id"], name: "index_classified_ads_on_country_id", using: :btree
   add_index "classified_ads", ["user_id"], name: "index_classified_ads_on_user_id", using: :btree
 
   create_table "countries", force: :cascade do |t|

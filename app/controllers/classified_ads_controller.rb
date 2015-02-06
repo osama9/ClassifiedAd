@@ -84,6 +84,6 @@ class ClassifiedAdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classified_ad_params
-      params.require(:classified_ad).permit(:title, :description, :category_id)
+      params.require(:classified_ad).permit(:title, :description, :category_id, :country_id, :city_id)
     end
 end

@@ -7,6 +7,66 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cities = [
+["أبها", "Abha"],
+["","Al-Baha"],
+["","Al-Hasa"],
+["","Al-Kharj"],
+["","Arar"],
+["","Buraidah"],
+["","Dammam"],
+["","Dhahran"],
+["","Hafar Al-Batin"],
+["","Hail"],
+["","Jeddah"],
+["","Jizan"],
+["","Jubail"],
+["","Khafji"],
+["","Khobar"],
+["","Madinah"],
+["","Makkah"],
+["","Rabigh"],
+["","Ras Tanura"],
+["","Riyadh"],
+["","Tabouk"],
+["","Taif"],
+["","Yanbu"]
+]
+
+
+
+
+# Kuwait
+# Oman
+# Qatar
+# Saudi Arabia
+# UAE
+
+
 categories = [
 	["ألعاب الكونسول", "Video Games"],
 	["أجهزة","Appliances"],
@@ -37,6 +97,12 @@ categories = [
 	["مركبات","Vehicles"],
 	]
 
-categories.each do |arabic_name, english_name|
-	Category.create(arabic_name: arabic_name, english_name: english_name)
-end
+# categories.each do |arabic_name, english_name|
+# 	Category.create(arabic_name: arabic_name, english_name: english_name)
+# end
+
+# cities.each do |arabic_name, english_name|
+# 	City.create(arabic_name: arabic_name, english_name: english_name)
+# end
+
+Country.create(arabic_name: "السعودية", english_name:"Saudi Arabia")

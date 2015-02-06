@@ -24,3 +24,4 @@
 //= require ./classified/services/classified.service
 //= require ./classified/controllers/classified_list.controller
 //= require ./classified/controllers/category_list.controller
+//= require ./scripts/navbar

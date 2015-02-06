@@ -1,15 +1,29 @@
-<h1>Listing Classified Ads</h1>
 
 <table class="table" ng-show="vm.classifiedList.length > 0" ng-cloak>
-
+<thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>City</th>
+      <th>Date</th>
+    </tr>
+  </thead>
 
    <tbody>
     
       <tr ng-repeat="classified in vm.classifiedList">
       
-	      	<td><img src="" width="150" height="150" /></td>
-	        <td> <a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></td>
-	        <td>{{classified.description}}</td>
+	      	<td class="post-image"><img src="" width="150" height="100" /></td>
+          <td>
+          	<h4><a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></h4>
+          	<p>{{classified.description}}</p>
+          </td>
+          <td class="post-city">
+          	<h5>
+          	{{classified.city.english_name}}
+          	</h5>
+          </td>
+          <td>{{classified.created_at | date:"dd/MM/yyyy 'at' h:mma"}}</td>
         
       </tr>
  	</div>
