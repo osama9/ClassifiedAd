@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202205430) do
+ActiveRecord::Schema.define(version: 20150206180225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 20150202205430) do
     t.datetime "updated_at",                  null: false
   end
 
+  create_table "cities", force: :cascade do |t|
+    t.string  "english_name"
+    t.text    "arabic_name"
+    t.integer "country_id"
+  end
+
   create_table "classified_ads", force: :cascade do |t|
     t.boolean  "is_published", default: true
     t.boolean  "is_expired",   default: false
@@ -33,10 +39,21 @@ ActiveRecord::Schema.define(version: 20150202205430) do
     t.integer  "category_id"
     t.string   "title"
     t.text     "description"
+    t.integer  "counrty_id"
+    t.integer  "city_id"
   end
 
   add_index "classified_ads", ["category_id"], name: "index_classified_ads_on_category_id", using: :btree
+  add_index "classified_ads", ["city_id"], name: "index_classified_ads_on_city_id", using: :btree
+  add_index "classified_ads", ["counrty_id"], name: "index_classified_ads_on_counrty_id", using: :btree
   add_index "classified_ads", ["user_id"], name: "index_classified_ads_on_user_id", using: :btree
+
+  create_table "countries", force: :cascade do |t|
+    t.text     "english_name"
+    t.text     "arabic_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "",    null: false

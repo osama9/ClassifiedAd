@@ -1,3 +1,3 @@
 class city < ActiveRecord::Base
-	has_many :countries
+	belongs_to :country
 end
