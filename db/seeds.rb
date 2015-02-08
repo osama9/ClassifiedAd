@@ -7,30 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 cities = [
 ["أبها", "Abha"],
 ["","Al-Baha"],
@@ -101,8 +77,8 @@ categories = [
 # 	Category.create(arabic_name: arabic_name, english_name: english_name)
 # end
 
-# cities.each do |arabic_name, english_name|
-# 	City.create(arabic_name: arabic_name, english_name: english_name)
-# end
+cities.each do |arabic_name, english_name|
+	City.create(arabic_name: arabic_name, english_name: english_name)
+end
 
 Country.create(arabic_name: "السعودية", english_name:"Saudi Arabia")

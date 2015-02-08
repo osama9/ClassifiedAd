@@ -1,6 +1,7 @@
 class ClassifiedAdsController < ApplicationController
   before_action :set_classified_ad, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  after_action :upload_images, only: [:update, :create]
 
   # GET /classified_ads
   # GET /classified_ads.json
@@ -48,6 +49,7 @@ class ClassifiedAdsController < ApplicationController
   def update
     respond_to do |format|
       if @classified_ad.update(classified_ad_params)
+        upload_images
         format.html { redirect_to @classified_ad, notice: 'Classified ad was successfully updated.' }
         format.json { render :show, status: :ok, location: @classified_ad }
       else
@@ -76,6 +78,14 @@ class ClassifiedAdsController < ApplicationController
     render :json => @category_list                     
   end
 
+  def upload_images
+    if params[:classified_ad]['images']
+      params[:classified_ad]['images'].each do |a|
+        @image = @classified_ad.images.create!(path: a)
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_classified_ad
@@ -86,4 +96,5 @@ class ClassifiedAdsController < ApplicationController
     def classified_ad_params
       params.require(:classified_ad).permit(:title, :description, :category_id, :country_id, :city_id)
     end
+
 end

@@ -2,7 +2,7 @@
 <div class="col-md-10 col-md-offset-2">
 <% end %>
 
-<%= form_for(@classified_ad, html: {class:"form_horiontal"}) do |f| %>
+<%= form_for(@classified_ad, html: {class: "form_horiontal", multipart: true}) do |f| %>
   <% if @classified_ad.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@classified_ad.errors.count, "error") %> prohibited this classified_ad from being saved:</h2>
@@ -41,6 +41,18 @@
   <%= f.label :city, :class => "form-control" %>
   <%= f.collection_select :city_id, City.all, :id, :english_name,{}, {:class => "form-control"}%>
   </div>
+
+     <div class="form-group">
+       <%= f.label :images %><br>
+       <%= f.file_field :images, :multiple => true, :class => "form-control"  %>
+     </div>
+ 
+ <!--  <%= f.fields_for :post_attachments do |p| %>
+     <div class="form-group">
+       <%= p.label :image %><br>
+       <%= p.file_field :image, :multiple => true, :class => "form-control", name: "classified_ad[image][]" %>
+     </div>
+   <% end %> -->
 </div>
 
 <% end %>
