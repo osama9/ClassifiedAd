@@ -15,7 +15,8 @@
     
       <tr ng-repeat="classified in vm.classifiedList">
         
-          <td class="post-image"><img src="{{classified.images[0].path.url}}" width="150" height="100" /></td>
+          <!-- <td class="post-image"><img src="{{classified.images[0].path.url}}" width="150" height="100" /></td> -->
+           <td class="post-image"><img src="" width="150" height="100" /></td>
           <td>
           	<h4><a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></h4>
           	<p>{{classified.description}}</p>
