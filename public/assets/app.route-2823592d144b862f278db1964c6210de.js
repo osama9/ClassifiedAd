@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e){e.when("/",{controller:"ClassifiedListController",controllerAs:"vm",templateUrl:"classified_ads/index.html"}).when("/:categoryId",{templateUrl:"categories/category_layout.html",controller:"CategoryListController",controllerAs:"vm"}).otherwise("/")}angular.module("app.route").config(e),e.$inject=["$routeProvider"]}();

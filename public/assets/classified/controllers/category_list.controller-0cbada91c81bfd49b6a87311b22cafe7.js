@@ -1,0 +1,1 @@
+!function(){"use strict";function t(t){function o(){function o(t){i.classifiedList=t.data}function n(){console.log("ERROR")}t.getCategoryList().then(o,n)}var i=this;o()}angular.module("classified.controllers.CategoryListController").controller("CategoryListController",t),t.$inject=["Classified"]}();

@@ -1,0 +1,1 @@
+!function(){"use strict";function e(e,t){function i(){return e.get("/classified_ads.json")}function s(){return e.get("/category/"+t.categoryId)}var r={getCategoryList:s,getClassifiedList:i};return r}angular.module("classified.services.ClassifiedService").factory("Classified",e),e.$inject=["$http","$routeParams"]}();
