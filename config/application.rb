@@ -24,6 +24,7 @@ module ClassifiedApp
     config.active_record.raise_in_transactional_callbacks = true
 
     config.assets.initialize_on_precompile = false
+    config.assets.compile = true
     #TONOTE
     #To add the following paths to assets pipeline  
     config.assets.paths << Rails.root.join("vendor", "assets", "bower_components")
@@ -33,6 +34,6 @@ module ClassifiedApp
     config.generators.javascripts = false
     config.serve_static_files = true
 
-    
+    config.assets.precompile += %w( *.js *.css *.scss )
   end
 end
