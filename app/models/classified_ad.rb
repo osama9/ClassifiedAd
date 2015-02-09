@@ -14,11 +14,6 @@ class ClassifiedAd < ActiveRecord::Base
 							length: {minimum: 5}
 
 
-def as_json(options={})
-  super(:only => [:title,:discription,:images],
-        :include => :city
-        )
-end
 
 
 end
