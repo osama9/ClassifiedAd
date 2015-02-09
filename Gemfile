@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'angular-rails-templates'
 gem 'bower-rails'
 gem 'devise'
-gem 'rails_admin'
+#gem 'rails_admin'
 gem 'carrierwave'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
