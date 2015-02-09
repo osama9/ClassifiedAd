@@ -13,6 +13,7 @@
 	 		Classified.getClassifiedList().then(getClassifiedListSuccessFn, getClassifiedListErrorFn);
 
 	 		function getClassifiedListSuccessFn(data, status, headers, config ){
+	 			console.log(data.data);
 	 			vm.classifiedList = data.data;
 	 		}
 

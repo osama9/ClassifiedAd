@@ -7,7 +7,8 @@ class ClassifiedAdsController < ApplicationController
   # GET /classified_ads.json
   def index
     @classified_ads = ClassifiedAd.order(created_at: :desc)
-    render :json => @classified_ads
+    #render :json => @classified_ads
+    #render :json => @classified_ads.to_json({:include => @classified_ads.city})
   end
 
   # GET /classified_ads/1
