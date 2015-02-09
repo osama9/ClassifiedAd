@@ -17,7 +17,7 @@ gem 'sprockets-rails'
 gem 'angular-rails-templates'
 gem 'bower-rails'
 gem 'devise'
-gem 'rails_admin'
+
 gem 'carrierwave'
 gem 'font-awesome-rails'
 # Use jquery as the JavaScript library
