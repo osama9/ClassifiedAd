@@ -12,4 +12,13 @@ class ClassifiedAd < ActiveRecord::Base
 
 	validates :description, presence: true,
 							length: {minimum: 5}
+
+
+def as_json(options={})
+  super(:only => [:title,:discription,:images],
+        :include => :city
+        )
+end
+
+
 end

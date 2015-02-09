@@ -10,7 +10,7 @@ class ClassifiedAdsController < ApplicationController
 
     # respond_to do |format|
     #     format.html { render :index }
-    #     format.json { render json: @classified_ads, status: :success }
+    #     format.json { render json: @classified_ads.as_json, status: :success }
     #   end
     
     #render :json => @classified_ads.to_json({:include => @classified_ads.city})
