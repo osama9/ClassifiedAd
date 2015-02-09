@@ -34,6 +34,6 @@ module ClassifiedApp
     config.generators.javascripts = false
     config.serve_static_files = true
 
-    config.assets.precompile += %w( *.js *.css *.scss )
+    #config.assets.precompile += %w( *.js *.css *.scss )
   end
 end
