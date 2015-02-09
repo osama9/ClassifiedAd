@@ -23,3 +23,5 @@
 @import "sidebar";
 @import "classified_list";
 
+//= require_self
+//= require_tree .
