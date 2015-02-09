@@ -77,5 +77,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+  #config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
 end

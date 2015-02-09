@@ -2,17 +2,17 @@ class ClassifiedAdsController < ApplicationController
   before_action :set_classified_ad, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
   after_action :upload_images, only: [:update, :create]
-  respond_to :html, :json
+
   # GET /classified_ads
   # GET /classified_ads.json
   def index
     @classified_ads = ClassifiedAd.order(created_at: :desc)
-    respond_with @classified_ads
+
     # respond_to do |format|
     #     format.html { render :index }
     #     format.json { render json: @classified_ads, status: :success }
     #   end
-    #render :json => @classified_ads
+    
     #render :json => @classified_ads.to_json({:include => @classified_ads.city})
   end
 
