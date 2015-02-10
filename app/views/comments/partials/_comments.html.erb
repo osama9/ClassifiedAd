@@ -1,0 +1,11 @@
+<div ng-controller="CommentsController as vm">
+{{5+9}}
+<div class="comment" ng-repeat="comment in vm.comments" ng-cloak>
+<span class="username">{{comment.user.username}}</span>
+<span class="time">{{comment.created_at}}</span>
+<p class="content">{{comment.content}}</p>
+</div>
+
+
+
+</div>

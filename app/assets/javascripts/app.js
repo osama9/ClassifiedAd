@@ -3,7 +3,8 @@
 	angular.module("app",[
 		'templates',
 		'app.route',
-		'classified'
+		'classified',
+		'comments'
 		]);
 
 
@@ -12,6 +13,10 @@
 		'classified.controllers.ClassifiedListController',
 		'classified.controllers.CategoryListController',
 		'classified.services.ClassifiedService'
+		]);
+
+	angular.module('comments',[
+		'comments.controllers.CommentsController'
 		]);
 
 })();

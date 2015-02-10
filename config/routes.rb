@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   end
 
   
-  resources :classified_ads
+  resources :classified_ads do
+    resources :comments
+  end 
 
   get '/category/:id' => 'classified_ads#list_for_category'
   #root "classified_ads#index"
