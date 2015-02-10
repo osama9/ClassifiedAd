@@ -56,7 +56,6 @@ class ClassifiedAdsController < ApplicationController
   def update
     respond_to do |format|
       if @classified_ad.update(classified_ad_params)
-        upload_images
         format.html { redirect_to @classified_ad, notice: 'Classified ad was successfully updated.' }
         format.json { render :show, status: :ok, location: @classified_ad }
       else
