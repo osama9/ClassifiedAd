@@ -17,6 +17,7 @@ gem 'sprockets-rails'
 gem 'angular-rails-templates'
 gem 'bower-rails'
 gem 'devise'
+gem 'angular_rails_csrf'
 
 gem 'carrierwave'
 gem 'font-awesome-rails'

@@ -3,12 +3,14 @@ class CommentsController < ApplicationController
 
 
 	def index
+    @comments = Comment.where(:classified_ad_id => params[:classified_ad_id])
 
+    render json: @comments, status: 200
 	end
 
 	def create
-      @comment = current_user.comment.new(classified_ad_params)
-    end
+    puts comment_params
+      @comment = current_user.comments.new(comment_params)
     respond_to do |format|
       if @comment.save
         format.json { render json: @comment, status: :created, location: @classified_ad }

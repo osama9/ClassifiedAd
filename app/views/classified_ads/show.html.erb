@@ -1,6 +1,6 @@
 
 <% content_for :column_width_start do %>
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-8 col-md-offset-2">
 <% end %>
 
 
@@ -22,10 +22,21 @@
   <%= @classified_ad.description %>
 </p>
 
+<div class="images">
+	<ul>
+		<% @classified_ad.images.each do |image|  %>
+			<li><img src="<%= image.path.url %>"></li>
+		<% end %>
+	</ul>
+</div>
+
+<% if current_user == @classified_ad.user %>
 <%= link_to 'Edit', edit_classified_ad_path(@classified_ad) %> |
 <%= link_to 'Back', root_path %>
+<% end %>
 
-<%= render partial: "comments/partials/comments" %>
 <% content_for :column_width_end do %>
 </div>
 <% end %>
+
+<%= render partial: "comments/partials/comments" %>

@@ -6,7 +6,7 @@
  
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body> 
 <div class="header-panel">
 	<%= render partial: "classified_ads/partials/navbar" %>
 </div>
@@ -14,7 +14,8 @@
 <div class="container-fluid">
 <div class="row">
 
-<%= render "classified_ads/partials/sidebar" %>
+<%= yield :sidebar %>
+
 	
 
 		<% if content_for?(:column_width_start) %>
