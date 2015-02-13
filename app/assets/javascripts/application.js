@@ -27,4 +27,3 @@
 //= require ./app/comments/comments
 //= require ./app/comments/services/comments.services
 //= require ./app/comments/controllers/comments.controller
-//= require ./scripts/navbar
