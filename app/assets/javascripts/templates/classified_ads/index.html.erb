@@ -6,19 +6,18 @@
     <tr>
       <th></th>
       <th></th>
-      <th>City</th>
-      <th>Date</th>
+      <th>{{strings[0]}}</th>
+      <th><%= I18n.t :date %></th>
     </tr>
   </thead>
 
    <tbody>
-    
-      <tr ng-repeat="classified in vm.classifiedList">
+         <tr ng-repeat="classified in vm.classifiedList">
         
           <td class="post-image"><img src="{{classified.images[0].path.url}}" width="150" height="100" /></td>
           
           <td>
-          	<h4><a href="/classified_ads/{{classified.id}}"> {{classified.title}}</a></h4>
+          	<h4><a href="/{{vm.locale}}/classified_ads/{{classified.id}}"> {{classified.title}}</a></h4>
           	<p>{{classified.description}}</p>
           </td>
           <td class="post-city">
@@ -33,4 +32,9 @@
   </tbody>
 </table>
 
+
+<script type="text/javascript">
+  window.I18n = <%= I18n.backend.send(:translations).to_json.html_safe %>
+  console.log(I18n["en"]["hello"]);
+</script>
 

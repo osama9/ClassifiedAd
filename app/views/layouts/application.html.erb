@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" lang="<%= I18n.locale %>">
 <head>
   <title>ClassifiedApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
  
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body> 
 <div class="header-panel">
@@ -17,7 +18,7 @@
 <%= yield :sidebar %>
 
 	
-
+		
 		<% if content_for?(:column_width_start) %>
 			<%= yield(:column_width_start) %>
 		<% else %>

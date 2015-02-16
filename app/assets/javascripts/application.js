@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-route
+//= require angular-cookies
 //= require angular-rails-templates	
 //= require bootstrap/dist/js/bootstrap
 //= require login-signup-modal-window/js/main

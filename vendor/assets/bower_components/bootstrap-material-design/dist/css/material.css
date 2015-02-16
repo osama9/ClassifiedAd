@@ -2309,6 +2309,11 @@ Then, run this script to get the list.
 body {
   background-color: #EEEEEE;
 }
+html[lang='ar']
+body{
+  direction: rtl;
+}
+
 body.inverse {
   background: #333333;
 }

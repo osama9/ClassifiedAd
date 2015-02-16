@@ -16,7 +16,7 @@
 			return Comments;
 
 			function PostComment(classified_ad_id, comment){
-				return $http.post('/classified_ads/'+classified_ad_id+'/comments.json',{
+				return $http.post('/en/classified_ads/'+classified_ad_id+'/comments.json',{
 					comment: {
 						content: comment,
 						classified_ad_id: classified_ad_id
@@ -25,7 +25,7 @@
 			}
 
 			function GetComments(classified_ad_id){
-				return $http.get('/classified_ads/'+classified_ad_id+'/comments.json');
+				return $http.get('/en/classified_ads/'+classified_ad_id+'/comments.json');
 			}
 			
 		}

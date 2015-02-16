@@ -4,7 +4,7 @@
     .module('thinkster.authentication.services')
     .factory('Authentication', Authentication);
 
-    Authentication.$inject = ['$cookies', '$http'];
+    Authentication.$inject = ['cookies', '$http'];
 
     function Authentication($cookies, $http) {
         var Authentication = {

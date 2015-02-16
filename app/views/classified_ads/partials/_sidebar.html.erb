@@ -1,7 +1,11 @@
 <div class="col-sm-2 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
           <% Category.where(is_active: true).each do |category| %>
-            <li><a href="#/<%= category.id %>"><%= category.english_name %></a></li>
+            <% if I18n.locale == :en %>
+              <li><a href="#/<%= category.id %>"><%= category.english_name  %></a></li>
+            <% else %>
+              <li><a href="#/<%= category.id %>"><%= category.arabic_name  %></a></li>
+            <% end %>
           <% end %>
           <!--   <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Reports</a></li>

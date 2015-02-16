@@ -3,6 +3,8 @@
   "dependencies": {
     "bootstrap-material-design": "latest",
     "angular": "latest",
-    "angular-route": "latest"
+    "angular-route": "latest",
+    "angular-cookies": "latest",
+    "bootstrap-rtl": "latest"
   }
 }

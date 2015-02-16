@@ -4,12 +4,17 @@
 	angular.module('classified.controllers.ClassifiedListController')
 	 .controller('ClassifiedListController', ClassifiedListController);
 
-	 ClassifiedListController.$inject = ['Classified']
-	 function ClassifiedListController(Classified){
+	 ClassifiedListController.$inject = ['$scope', 'Classified', '$cookies'];
+	 function ClassifiedListController($scope, Classified, $cookies){
 	 	var vm = this;
+	 	//var locale = $cookies.locale;
+	 	vm.locale = $cookies.locale;
+	 	vm.arStrings = I18n["ar"];
+	 	vm.enStrings = I18n["en"];
 	 	activate();
 
 	 	function activate(){
+	 		
 	 		Classified.getClassifiedList().then(getClassifiedListSuccessFn, getClassifiedListErrorFn);
 
 	 		function getClassifiedListSuccessFn(data, status, headers, config ){

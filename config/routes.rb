@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  as :user do 
+  scope "/:locale" do
+    as :user do 
     get '/register', to: 'devise/registrations#new', as: :register
     get '/login', to: 'devise/sessions#new', as: :login
     get '/logout', to: 'devise/sessions#destroy', as: :logout
@@ -20,8 +20,10 @@ Rails.application.routes.draw do
   end 
 
   get '/category/:id' => 'classified_ads#list_for_category'
-  #root "classified_ads#index"
-  root "layouts#index"
+  end
+  
+ root "layouts#index"
+  get '/:locale' => "layouts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

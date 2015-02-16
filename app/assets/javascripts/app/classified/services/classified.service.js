@@ -14,11 +14,11 @@
 			return Classified;
 
 			function getClassifiedList(){
-				return $http.get('/classified_ads.json');
+				return $http.get('/en/classified_ads.json');
 			}
 
 			function getCategoryList(){
-				return $http.get('/category/' + $routeParams.categoryId);
+				return $http.get('/en/category/' + $routeParams.categoryId);
 			}
 		}
 })();
