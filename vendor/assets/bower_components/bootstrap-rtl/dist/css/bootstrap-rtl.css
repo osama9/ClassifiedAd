@@ -952,6 +952,14 @@ th {
     left: 0;
     right: auto;
   }
+
+  .navbar-left {
+    float: right;
+  }
+
+  .navbar-right {
+    float: left !important;
+  }
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
@@ -1161,10 +1169,6 @@ th {
   .navbar-left.flip {
     float: right !important;
   }
-
-  .navbar-left  {
-    float: right !important;
-  }
   .navbar-right:last-child {
     margin-left: -15px;
     margin-right: auto;
@@ -1178,13 +1182,6 @@ th {
     left: 0;
     right: auto;
   }
-
-  .navbar-right {
-    float: left !important;
-    margin-left: -15px;
-  }
-
-
 }
 @media (min-width: 768px) {
   .navbar-text {

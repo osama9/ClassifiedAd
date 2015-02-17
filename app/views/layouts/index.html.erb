@@ -1,12 +1,6 @@
 <% content_for :sidebar do %>
 <%= render "classified_ads/partials/sidebar" %>
 <% end %>
-	<% if I18n.locale == I18n.default_locale %>
-			  <%= link_to "إنجليزي", params.merge({:locale => :en})%>
-
-		<% else %>
-			  <%= link_to "Arabic", params.merge({:locale => :ar})%>
-
-		<%end%>
+	
 <a href="/<%= I18n.locale %>/classified_ads/new" class="btn btn-primary mdi-content-add"></a>
 <div ng-view class="view-frame animate-view"></div>

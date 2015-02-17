@@ -12,6 +12,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery-cookie/jquery.cookie
 //= require angular
 //= require angular-route
 //= require angular-cookies
@@ -28,3 +29,4 @@
 //= require ./app/comments/comments
 //= require ./app/comments/services/comments.services
 //= require ./app/comments/controllers/comments.controller
+//= require updateCookies

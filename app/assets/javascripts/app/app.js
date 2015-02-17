@@ -5,9 +5,9 @@
 		'app.route',
 		//'authentication',
 		'classified',
-		'comments'
+		'comments',
+		
 		]);
-
 
 	angular.module('app.route',['ngRoute']);
 	angular.module('classified',[

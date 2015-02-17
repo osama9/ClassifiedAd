@@ -5,6 +5,7 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-cookies": "latest",
-    "bootstrap-rtl": "latest"
+    "bootstrap-rtl": "latest",
+    "jquery-cookie": "latest"
   }
 }

@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 	 
 	def set_locale
 	  I18n.locale = params[:locale] || I18n.default_locale
-	  cookies['locale'] = { :value => params[:locale] || :ar, :expires => 1.year.from_now } 
+	  cookies[:locale] = { :value => I18n.locale, :expires => 1.year.from_now } 
 	end
 
 	def default_url_options(options = {})

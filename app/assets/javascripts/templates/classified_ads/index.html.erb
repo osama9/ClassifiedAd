@@ -1,12 +1,12 @@
 
-
+<%=I18n.locale %>
 
 <table class="table" ng-cloak>
 	<thead>
     <tr>
       <th></th>
       <th></th>
-      <th>{{strings[0]}}</th>
+      <th><%= I18n.t :city %></th>
       <th><%= I18n.t :date %></th>
     </tr>
   </thead>
@@ -33,8 +33,4 @@
 </table>
 
 
-<script type="text/javascript">
-  window.I18n = <%= I18n.backend.send(:translations).to_json.html_safe %>
-  console.log(I18n["en"]["hello"]);
-</script>
 

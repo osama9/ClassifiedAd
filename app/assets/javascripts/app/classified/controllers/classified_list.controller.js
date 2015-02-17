@@ -11,6 +11,7 @@
 	 	vm.locale = $cookies.locale;
 	 	vm.arStrings = I18n["ar"];
 	 	vm.enStrings = I18n["en"];
+	 	vm.updateLocale = updateLocale;
 	 	activate();
 
 	 	function activate(){
@@ -26,6 +27,11 @@
 	 			console.log("ERROR");
 	 			console.log(data);
 	 		}
+	 	}
+
+	 	function updateLocale(locale){
+	 			vm.strings = I18n[locale]
+	 			console.log(locale);
 	 	}
 	 }
 })();
