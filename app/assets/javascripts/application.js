@@ -29,4 +29,4 @@
 //= require ./app/comments/comments
 //= require ./app/comments/services/comments.services
 //= require ./app/comments/controllers/comments.controller
-//= require updateCookies
+//= require svg-path-generator

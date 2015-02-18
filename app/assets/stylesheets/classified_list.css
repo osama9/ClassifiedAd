@@ -6,3 +6,7 @@ table tbody tr td.post-city p{
 	line-height: 75px;
 }
 
+.date-header path{
+	fill: gray;
+}
+
