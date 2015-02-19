@@ -16,6 +16,8 @@
 //= require angular
 //= require angular-route
 //= require angular-cookies
+//= require i18n
+//= require i18n/translations
 //= require angular-rails-templates	
 //= require bootstrap/dist/js/bootstrap
 //= require login-signup-modal-window/js/main

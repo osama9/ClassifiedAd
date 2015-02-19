@@ -18,7 +18,7 @@ gem 'angular-rails-templates'
 gem 'bower-rails'
 gem 'devise'
 gem 'angular_rails_csrf'
-
+gem 'i18n-js'
 gem 'carrierwave'
 gem 'font-awesome-rails'
 # Use jquery as the JavaScript library

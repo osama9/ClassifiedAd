@@ -8,7 +8,6 @@
 	 function ClassifiedListController($scope, Classified, $cookies){
 	 	var vm = this;
 	 	activate();
-
 	 	function activate(){
 	 		transformImagesToPaths();
 	 		Classified.getClassifiedList().then(getClassifiedListSuccessFn, getClassifiedListErrorFn);
