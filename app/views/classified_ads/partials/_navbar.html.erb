@@ -11,6 +11,7 @@
                 <div class="navbar-collapse collapse navbar-inverse-collapse">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    
                     <% if I18n.locale == I18n.default_locale %>
                       <li><%= link_to "إنجليزي", params.merge({:locale => :en})%></li>
                      <% else %>

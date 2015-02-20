@@ -1,14 +1,20 @@
 (function(){
 	'use strict';
 
+
 	angular.module('classified.controllers.ClassifiedListController')
 	 .controller('ClassifiedListController', ClassifiedListController);
 
-	 ClassifiedListController.$inject = ['$scope', 'Classified', '$cookies'];
-	 function ClassifiedListController($scope, Classified, $cookies){
+	 ClassifiedListController.$inject = ['$scope', 'Classified', '$cookies', '$location'];
+	 function ClassifiedListController($scope, Classified, $cookies, $location){
+	 	updateStrings();
 	 	var vm = this;
+	 	vm.date = I18n.t("date");
+	 	vm.city = I18n.t("city");
 	 	activate();
 	 	function activate(){
+	 		
+	 		console.log(I18n.locale);
 	 		transformImagesToPaths();
 	 		Classified.getClassifiedList().then(getClassifiedListSuccessFn, getClassifiedListErrorFn);
 
@@ -23,6 +29,15 @@
 	 		}
 	 	}
 
+	 	function updateStrings(){
+	 		if ($location.absUrl().indexOf('en') > -1){
+	 			I18n.locale = 'en';
+	 			console.log(I18n.locale);
+	 		}else{
+	 			console.log(I18n.locale);
+	 			I18n.locale = 'ar'
+	 		}
+	 	}
 
 
 	 	function transformImagesToPaths(){
